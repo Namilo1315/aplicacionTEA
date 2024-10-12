@@ -2,20 +2,21 @@
 
 const CACHE_NAME = 'autismo-naty-cache-v1'; // Cambia esto si actualizas los archivos en el futuro
 const urlsToCache = [
-  './', // Incluye el index.html
   './index.html',
   './pictogramas.html',
   './animales.html',
-  './frutas.html',
-  './juegos.html',
+  './frutas.html',       // Asegúrate de que esta línea esté incluida
+  './juegos.html',       // Y que esta línea también esté incluida
   './emociones.html',
   './numeros.html',
-  './egulacion.html',
+  './regulacion.html',   // Incluye todos los HTML necesarios
   './preposiciones.html',
-  './imagenes/icon1.png', // Incluye tus iconos
+  './imagenes/icon1.png',
   './imagenes/icon2.png',
- 
-];
+  './estilos.css', // Ruta a tu archivo CSS
+  './index.js', 
+   './juegos.js', 
+]
 
 // Instala el service worker y cachea los archivos necesarios
 self.addEventListener('install', (event) => {
