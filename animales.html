@@ -1,0 +1,344 @@
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictograma </title>
+    <link rel="icon" type="image/jpg" href="./imagenes/caragrande.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .btn-return { background-color: #ff2534; color: #000; }
+        .btn-want { background-color: #33db44; color: #000; }
+        .btn-dont-want { background-color: #f0f0f0; color: #000; }
+        .btn-like { background-color: #28accd; color: #000; }
+        .btn-dislike { background-color: #ffcc25; color: #000; }
+        .btn-thanks { background-color: #f7eb65; color: #000; }
+        .btn-please { background-color: #44dfd5; color: #000; }
+        .bg-blue-pastel { background-color: #7ec1e4; color: #000; }
+        .bg-yellow-pastel { background-color: #f5d63c; color: #000; }
+        .bg-green-pastel { background-color: #43fb55; color: #000; }
+        .bg-orange { background-color: #f6ba85; color: #000; }
+        .bg-pink-pastel { background-color: #f4878f; color: #000; }
+        .bg-light-blue { background-color: #48b4cf; color: #000; }
+        .bg-light-green { background-color: #72cf44; color: #000; }
+        .bg-light-purple { background-color: #e47474; color: #000; }
+        .bg-yellow-light { background-color: #f7eb65; color: #000; }
+        .bg-turquoise { background-color: #44dfd5; color: #000; }
+        .bg-coral-light { background-color: #f6c170; color: #000; }
+        .bg-mint { background-color: #ff3c23db; color: #000; }
+    </style>
+<body>
+ <!-- Categoría: Pronombres col-lg-1 col-md-3 col-sm-3 col-xs-4 -->
+    
+
+
+  <!-- Selector de idioma 
+   <div class="container-fluid text-center">
+    <div class="dropdown text-end">
+      <button class="btn btn-light dropdown-toggle btn-sm " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="./imagenes/argetina.png" alt="" width="20px">
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('es')">
+            <img src="./imagenes/argetina.png" alt="Español" width="20"> Español
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('en')">
+            <img src="./imagenes/eeuu.png" alt="English" width="20"> English 
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+ 
+
+
+<div class="container-fluid text-center mt-2 ">
+    <div class="row m-auto fw-bold bg-yellow-light py-2 ">
+        <div class="col-md-4">
+            <a class=" borrar" href="./index.html"> <img  id="" class=" fw-bold  " src="./imagenes/home.svg" alt=""width="50px">Volver al Inicio</a> 
+        </div>
+        <div class="col-md-4">
+            <img  id="reproducir-frase" class="text-center" src="./imagenes/play-circle-outline.svg" alt=""width="50px">  Reproducir   
+        </div>
+        <div class="col-md-4">
+            <img class="text-center" id="limpiar-frase" src="./imagenes/trash-outline.svg" alt="" width="48px"> Borrar
+          
+        </div>
+       
+    </div>
+    <div class="d-flex flex-wrap mt-2  border p-3" id="phrase-container"> </div>
+</div>
+-->
+<div class="container-fluid mt-1">
+    <div class="row m-auto">
+      <div class="col-md-12">
+        <h5 class="fw-bold bg-yellow-light py-1 text-center">
+          <a class="borrar mx-2" href="./index.html"> 
+            <img class="fw-bold" src="./imagenes/home.svg" alt="" width="50px"> Volver al Inicio
+          </a> 
+          
+          <img id="reproducir-frase" class="mx-2" src="./imagenes/play-circle-outline.svg" alt="" width="60px">Reproducir
+          <img class="mx-2" id="limpiar-frase" src="./imagenes/trash-outline.svg" alt="" width="47px">Borrar
+        </h5>
+       
+        <div class="d-flex flex-wrap mb-3 border p-1" id="phrase-container"></div>
+      </div>
+    </div>
+  </div>
+
+<!-- Pictogramas de emociones -->
+          <div class="container-fluid general mt-1">
+            <div class="row m-auto">
+                <div class="col text-center">
+                    <img src="./imagenes/animales/gato doméstico.png" alt="gato" class="pictograma border bg-pink-pastel " data-word="gato"  id="gato">
+                    <p id=""class="fw-bold text-center parrafos">GATO</p>
+                </div>
+                <div class="col  text-center">
+                    <img src="./imagenes/animales/perro.png" alt="perro" class="pictograma border bg-pink-pastel " data-word="perro"  id="perro">
+                    <p id=""class="fw-bold text-center parrafos">PERRO</p>
+                </div> <div class="col text-center">
+                    <img src="./imagenes/animales/zorro.png" alt="zorro" class="pictograma border bg-pink-pastel" data-word="zorro" id="zorro">
+                    <p class="fw-bold text-center parrafos">ZORRO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/tortuga.png" alt="tortuga" class="pictograma border bg-pink-pastel" data-word="tortuga" id="tortuga">
+                    <p class="fw-bold text-center parrafos">TORTUGA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/serpiente.png" alt="serpiente" class="pictograma border bg-pink-pastel" data-word="serpiente" id="serpiente">
+                    <p class="fw-bold text-center parrafos">SERPIENTE</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/ratón.png" alt="ratón" class="pictograma border bg-pink-pastel" data-word="ratón" id="raton">
+                    <p class="fw-bold text-center parrafos">RATÓN</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/pulpo.png" alt="pulpo" class="pictograma border bg-pink-pastel" data-word="pulpo" id="pulpo">
+                    <p class="fw-bold text-center parrafos">PULPO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/pingüino.png" alt="pingüino" class="pictograma border bg-pink-pastel" data-word="pingüino" id="pinguino">
+                    <p class="fw-bold text-center parrafos">PINGÜINO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/pato.png" alt="pato" class="pictograma border bg-pink-pastel" data-word="pato" id="pato">
+                    <p class="fw-bold text-center parrafos">PATO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/oveja.png" alt="oveja" class="pictograma border bg-pink-pastel" data-word="oveja" id="oveja">
+                    <p class="fw-bold text-center parrafos">OVEJA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/mono.png" alt="mono" class="pictograma border bg-pink-pastel" data-word="mono" id="mono">
+                    <p class="fw-bold text-center parrafos">MONO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/jirafa.png" alt="jirafa" class="pictograma border bg-pink-pastel" data-word="jirafa" id="jirafa">
+                    <p class="fw-bold text-center parrafos">JIRAFA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/hipopótamo.png" alt="hipopótamo" class="pictograma border bg-pink-pastel" data-word="hipopótamo" id="hipopotamo">
+                    <p class="fw-bold text-center parrafos">HIPOPÓTAMO</p>
+                </div>
+                           
+                <div class="col text-center">
+                    <img src="./imagenes/animales/foca.png" alt="foca" class="pictograma border bg-pink-pastel" data-word="foca" id="foca">
+                    <p class="fw-bold text-center parrafos">FOCA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/delfín.png" alt="delfín" class="pictograma border bg-pink-pastel" data-word="delfín" id="delfin">
+                    <p class="fw-bold text-center parrafos">DELFÍN</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/conejo.png" alt="conejo" class="pictograma border bg-pink-pastel" data-word="conejo" id="conejo">
+                    <p class="fw-bold text-center parrafos">CONEJO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/cebra.png" alt="cebra" class="pictograma border bg-pink-pastel" data-word="cebra" id="cebra">
+                    <p class="fw-bold text-center parrafos">CEBRA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/caballo.png" alt="caballo" class="pictograma border bg-pink-pastel" data-word="caballo" id="caballo">
+                    <p class="fw-bold text-center parrafos">CABALLO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/toro.png" alt="toro" class="pictograma border bg-pink-pastel" data-word="toro" id="toro">
+                    <p class="fw-bold text-center parrafos">TORO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/sapo.png" alt="sapo" class="pictograma border bg-pink-pastel" data-word="sapo" id="sapo">
+                    <p class="fw-bold text-center parrafos">SAPO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/rana.png" alt="rana" class="pictograma border bg-pink-pastel" data-word="rana" id="rana">
+                    <p class="fw-bold text-center parrafos">RANA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/pollo.png" alt="pollo" class="pictograma border bg-pink-pastel" data-word="pollo" id="pollo">
+                    <p class="fw-bold text-center parrafos">POLLO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/periquito.png" alt="periquito" class="pictograma border bg-pink-pastel" data-word="periquito" id="periquito">
+                    <p class="fw-bold text-center parrafos">PERIQUITO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/paloma.png" alt="paloma" class="pictograma border bg-pink-pastel" data-word="paloma" id="paloma">
+                    <p class="fw-bold text-center parrafos">PALOMA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/oso.png" alt="oso" class="pictograma border bg-pink-pastel" data-word="oso" id="oso">
+                    <p class="fw-bold text-center parrafos">OSO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/mariquita.png" alt="mariquita" class="pictograma border bg-pink-pastel" data-word="mariquita" id="mariquita">
+                    <p class="fw-bold text-center parrafos">MARIQUITA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/leona.png" alt="leona" class="pictograma border bg-pink-pastel" data-word="leona" id="leona">
+                    <p class="fw-bold text-center parrafos">LEONA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/león.png" alt="león" class="pictograma border bg-pink-pastel" data-word="león" id="leon">
+                    <p class="fw-bold text-center parrafos">LEÓN</p>
+                </div>
+    
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/gallina.png" alt="gallina" class="pictograma border bg-pink-pastel" data-word="gallina" id="gallina">
+                    <p class="fw-bold text-center parrafos">GALLINA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/gallo.png" alt="gallo" class="pictograma border bg-pink-pastel" data-word="gallo" id="gallo">
+                    <p class="fw-bold text-center parrafos">GALLO</p>
+                </div>
+                <div class="col text-center">
+                    <img src="./imagenes/animales/tarántula.png" alt="tarántula" class="pictograma border bg-pink-pastel" data-word="araña" id="tarantula">
+                    <p class="fw-bold text-center parrafos">ARAÑA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/vaca.png" alt="vaca" class="pictograma border bg-pink-pastel" data-word="vaca" id="vaca">
+                    <p class="fw-bold text-center parrafos">VACA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/puma.png" alt="puma" class="pictograma border bg-pink-pastel" data-word="puma" id="puma">
+                    <p class="fw-bold text-center parrafos">PUMA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/pez payaso.png" alt="pez payaso" class="pictograma border bg-pink-pastel" data-word="pez" id="pez">
+                    <p class="fw-bold text-center parrafos">PEZ</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/pájaro.png" alt="pájaro" class="pictograma border bg-pink-pastel" data-word="pájaro" id="pajaro">
+                    <p class="fw-bold text-center parrafos">PÁJARO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/mosca.png" alt="mosca" class="pictograma border bg-pink-pastel" data-word="mosca" id="mosca">
+                    <p class="fw-bold text-center parrafos">MOSCA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/mariposa.png" alt="mariposa" class="pictograma border bg-pink-pastel" data-word="mariposa" id="mariposa">
+                    <p class="fw-bold text-center parrafos">MARIPOSA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/hormiga.png" alt="hormiga" class="pictograma border bg-pink-pastel" data-word="hormiga" id="hormiga">
+                    <p class="fw-bold text-center parrafos">HORMIGA</p>
+                </div>
+                <div class="col text-center">
+                    <img src="./imagenes/animales/abeja.png" alt="abeja" class="pictograma border bg-pink-pastel" data-word="abeja" id="abeja">
+                    <p class="fw-bold text-center parrafos">ABEJA</p>
+                </div>
+                <div class="col text-center">
+                    <img src="./imagenes/animales/gallina.png" alt="gallina" class="pictograma border bg-pink-pastel" data-word="gallina" id="gallina">
+                    <p class="fw-bold text-center parrafos">GALLINA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/elefante.png" alt="elefante" class="pictograma border bg-pink-pastel" data-word="elefante" id="elefante">
+                    <p class="fw-bold text-center parrafos">ELEFANTE</p>
+                </div>
+            
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/cerdo.png" alt="cerdo" class="pictograma border bg-pink-pastel" data-word="cerdo" id="cerdo">
+                    <p class="fw-bold text-center parrafos">CERDO</p>
+                </div>
+
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/leopardo.png" alt="bandada" class="pictograma border bg-pink-pastel" data-word="leopardo" id="leopardo">
+                    <p class="fw-bold text-center parrafos">LEOPARDO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/loro.png" alt="loro" class="pictograma border bg-pink-pastel" data-word="loro" id="loro">
+                    <p class="fw-bold text-center parrafos">LORO</p>
+                </div>
+              
+                </div>
+      
+                <section>
+                    <div class="container-fluid mt-3" >
+                        <h3  class=" fw-bold bg-yellow-light py-2 text-center"> ¡Vamos a Practicar!</h3>
+                        <div class="text-to-speech">
+                            <textarea class="fw-bold " id="text-input" placeholder="Escribe que animal te gusta más..."></textarea>
+                            <div class="buttons text-center">
+                                <button class="l1" id="speak-button">Reproducir</button>
+                                <button class="2" id="clear-button">Borrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div> 
+      <!-- SECCION INFORMACION -->
+  
+     
+     
+    
+    
+    
+
+
+     
+    
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9SKddQX2zglP4WLP6U6Cq4U4ZV7eQ3FzyK0ttf8TZJ7dbP68S46" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-w76AibP9gyb2EGG4x5fOU0MAtcU0Kv3pF4/7Xrrd3NH4phMzE4XzN2XyK5gHfN9Yb" crossorigin="anonymous"></script>
+
+</body>

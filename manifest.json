@@ -1,0 +1,10 @@
+{
+    "name": "Autismo Naty",
+    "short_name": "Autismo Naty",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": []
+  }
+  

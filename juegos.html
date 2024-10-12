@@ -1,0 +1,269 @@
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictograma </title>
+    <link rel="icon" type="image/jpg" href="./imagenes/caragrande.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .btn-return { background-color: #ff2534; color: #000; }
+        .btn-want { background-color: #33db44; color: #000; }
+        .btn-dont-want { background-color: #f0f0f0; color: #000; }
+        .btn-like { background-color: #28accd; color: #000; }
+        .btn-dislike { background-color: #ffcc25; color: #000; }
+        .btn-thanks { background-color: #f7eb65; color: #000; }
+        .btn-please { background-color: #44dfd5; color: #000; }
+        .bg-blue-pastel { background-color: #7ec1e4; color: #000; }
+        .bg-yellow-pastel { background-color: #f5d63c; color: #000; }
+        .bg-green-pastel { background-color: #43fb55; color: #000; }
+        .bg-orange { background-color: #f6ba85; color: #000; }
+        .bg-pink-pastel { background-color: #f4878f; color: #000; }
+        .bg-light-blue { background-color: #48b4cf; color: #000; }
+        .bg-light-green { background-color: #72cf44; color: #000; }
+        .bg-light-purple { background-color: #e47474; color: #000; }
+        .bg-yellow-light { background-color: #f7eb65; color: #000; }
+        .bg-turquoise { background-color: #44dfd5; color: #000; }
+        .bg-coral-light { background-color: #f6c170; color: #000; }
+        .bg-mint { background-color: #ff3c23db; color: #000; }
+        .bg-pink-pastel {
+        background-color: #ffc0cb;}
+        
+        .bg-orange {
+            background-color: #ffa500;
+        }
+        
+        .bg-coral-light {
+            background-color: #f08080;
+        }
+        
+        .bg-purple {
+            background-color: #800080;
+        }
+        
+        .bg-lilac {
+            background-color: #c8a2c8;
+        }
+        
+        .bg-burgundy {
+            background-color: #800000;
+        }
+        
+        .bg-lightgreen {
+            background-color: #90ee90;
+        }
+        
+        .bg-darkgreen {
+            background-color: #006400;
+        }
+        
+        .bg-turquoise {
+            background-color: #40e0d0;
+        }
+        
+        .bg-gold {
+            background-color: #ffd700;
+        }
+        
+        .bg-silver {
+            background-color: #c0c0c0;
+        }
+        .color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre los círculos */
+    justify-content: center; /* Centrar los círculos */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Círculos perfectos */
+    cursor: pointer;
+    border: 1px solid #040404; /* Borde blanco */
+    transition: transform 0.2s ease; /* Suave transición */
+}
+
+.color-circle:hover {
+    transform: scale(1.2); /* Aumenta de tamaño al pasar el mouse */
+}
+
+/* Colores personalizados */
+.bg-pink-pastel {
+    background-color: #ffcbdb;
+}
+
+.bg-orange {
+    background-color: #ffa500;
+}
+
+.bg-coral-light {
+    background-color: #ff7f50;
+}
+
+.bg-purple {
+    background-color: #800080;
+}
+
+.bg-lilac {
+    background-color: #c8a2c8;
+}
+
+.bg-burgundy {
+    background-color: #800020;
+}
+
+.bg-light-green {
+    background-color: #90ee90;
+}
+
+.bg-darkgreen {
+    background-color: #006400;
+}
+
+.bg-turquoise {
+    background-color: #40e0d0;
+}
+
+.bg-gold {
+    background-color: #ffd700;
+}
+
+.bg-silver {
+    background-color: #c0c0c0;
+}
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .canvas-responsive {
+        width: 100% !important;
+        height: 80hv;
+
+    }
+
+    /* Ajuste del tamaño de los botones */
+    .btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    /* Margen inferior para que el footer se vea siempre abajo */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    footer {
+        margin-top: auto;
+    }
+
+    /* Aumentar el tamaño del canvas y reducir los márgenes en pantallas pequeñas */
+    .container-fluid {
+        padding: 10px;
+    }
+
+    .color-circle {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Ajuste para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    .canvas-responsive {
+        width: 88% !important;
+      }
+
+    
+
+    /* Botones aún más pequeños */
+    .btn {
+        font-size: 13px;
+        padding: 3px 6px;
+    }
+
+    .color-circle {
+        width: 20px;
+        height: 20px;
+    }
+    .img1{
+        width: 30px;
+    
+    }
+    /* Footer siempre al fondo */
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+ }
+
+
+    </style>
+<body>
+
+      <!-- SECCION INFORMACION -->
+
+      <div class="container-fluid text-center ">
+        <div class="row m-auto ">
+            
+          <div class="col-md-12 m-auto text-center ">
+            <div class="tools ">
+               
+              <div class="color-palette mt-2">
+               
+                <div><a href="./index.html"><img class="fw-bold img1 bg-yellow-light" src="./imagenes/home.svg" alt="" width="38px"> </a></div>
+                <div class="color-circle bg-primary mt-1" onclick="setColor('blue')"></div>
+                <div class="color-circle bg-secondary mt-1" onclick="setColor('gray')"></div>
+                <div class="color-circle bg-success mt-1" onclick="setColor('green')"></div>
+                <div class="color-circle bg-pink-pastel mt-1" onclick="setColor('pink')"></div>
+                <div class="color-circle bg-orange mt-1" onclick="setColor('orange')"></div>
+                <div class="color-circle bg-coral-light mt-1" onclick="setColor('coral')"></div>
+                <div class="color-circle bg-danger mt-1" onclick="setColor('red')"></div>
+                <div class="color-circle bg-warning mt-1" onclick="setColor('yellow')"></div>
+                <div class="color-circle bg-info mt-1" onclick="setColor('cyan')"></div>
+                <div class="color-circle bg-ligh mt-1" onclick="setColor('white')"></div>
+                <div class="color-circle bg-dark mt-1" onclick="setColor('black')"></div>
+                <div class="color-circle bg-purple mt-1" onclick="setColor('purple')"></div>
+                <div class="color-circle bg-lilac  mt-1" onclick="setColor('violet')"></div>
+                <div class="color-circle bg-burgundy  mt-1" onclick="setColor('maroon')"></div>
+                <div class="color-circle bg-light-green  mt-1" onclick="setColor('lightgreen')"></div>
+                <div class="color-circle bg-darkgreen  mt-1" onclick="setColor('darkgreen')"></div>
+                <div class="color-circle bg-turquoise  mt-1" onclick="setColor('turquoise')"></div>
+                <div class="color-circle bg-gold  mt-1" onclick="setColor('gold')"></div>
+                <div class="color-circle bg-silver  mt-1" onclick="setColor('silver')"></div>
+               
+                
+                
+              <button class="btn bg-blue-pastel fw-bold " onclick="setLineWidth(12)">-</button>
+              <button class="btn bg-blue-pastel fw-bold " onclick="setLineWidth(20)">+</button>
+             
+             
+              <button class=" btn bg-info fw-bold" onclick="undoLast()">Deshacer</button>
+              <button class="btn btn-danger fw-bold " onclick="saveDrawing()">Guardar</button>
+              <button class="btn bg-gold fw-bold" onclick="clearCanvas()"> <img src="./imagenes/trash-outline.svg" alt="" width="25px"></button>
+           </div>
+          
+      
+          
+
+        
+            </div>
+          </div>
+          <div class="col-md-12 text-center mb-2">
+            <canvas class="canvas-responsive m-auto" id="drawCanvas" width="1000" height="600"></canvas>
+          </div>
+        </div>
+      </div>
+      
+        
+    
+    <script src="./index.js"></script>
+    <script src="./juegos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9SKddQX2zglP4WLP6U6Cq4U4ZV7eQ3FzyK0ttf8TZJ7dbP68S46" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-w76AibP9gyb2EGG4x5fOU0MAtcU0Kv3pF4/7Xrrd3NH4phMzE4XzN2XyK5gHfN9Yb" crossorigin="anonymous"></script>
+
+</body>

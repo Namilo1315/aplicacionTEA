@@ -1,0 +1,948 @@
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictograma Interactivo</title>
+    <link rel="icon" type="image/jpg" href="./imagenes/caragrande.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .btn-return { background-color: #ff2534; color: #000; }
+        .btn-want { background-color: #33db44; color: #000; }
+        .btn-dont-want { background-color: #f0f0f0; color: #000; }
+        .btn-like { background-color: #28accd; color: #000; }
+        .btn-dislike { background-color: #ffcc25; color: #000; }
+        .btn-thanks { background-color: #f7eb65; color: #000; }
+        .btn-please { background-color: #44dfd5; color: #000; }
+        .bg-blue-pastel { background-color: #7ec1e4; color: #000; }
+        .bg-yellow-pastel { background-color: #f5d63c; color: #000; }
+        .bg-green-pastel { background-color: #43fb55; color: #000; }
+        .bg-orange { background-color: #f6ba85; color: #000; }
+        .bg-pink-pastel { background-color: #f4878f; color: #000; }
+        .bg-light-blue { background-color: #48b4cf; color: #000; }
+        .bg-light-green { background-color: #72cf44; color: #000; }
+        .bg-light-purple { background-color: #e47474; color: #000; }|
+      
+        .bg-yellow-light { background-color: #f7eb65; color: #000; }
+        .bg-turquoise { background-color: #44dfd5; color: #000; }
+        .bg-coral-light { background-color: #f6c170; color: #000; }
+        .bg-mint { background-color: #ff3c23db; color: #000; }
+    </style>
+<body>
+ <!-- Categoría: Pronombres col-lg-1 col-md-3 col-sm-3 col-xs-4 
+    <div class="container mt-1">
+        <div class="row">
+            <div class="col text-center">
+                <a href="./pictogramas.html"><button type="button" class="btn btn-return btn-lg m-2 img-carita" id="volver">VOLVER</button></a>
+                <button type="button" class="btn btn-want btn- m-2 img-carita" id="quiero">QUIERO</button>
+                <button type="button" class="btn btn-dont-want btn- m-2 img-carita" id="noquiero">NO QUIERO</button>
+                <button type="button" class="btn btn-like btn- m-2 img-carita" id="megusta">ME GUSTA</button>
+                <button type="button" class="btn btn-dislike btn- m-2 img-carita" id="nomegusta">NO ME GUSTA</button>
+                <button type="button" class="btn btn-please btn- m-2 img-carita" id="gracias">GRACIAS</button>
+                <button type="button" class=" btn btn-thanks btn- m-2 img-carita" id="porfavor">POR FAVOR</button>
+            </div>
+        </div>
+    </div>
+-->
+
+  <!-- Selector de idioma 
+   <div class="container-fluid text-center">
+    <div class="dropdown text-end">
+      <button class="btn btn-light dropdown-toggle btn-sm " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="./imagenes/argetina.png" alt="" width="20px">
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('es')">
+            <img src="./imagenes/argetina.png" alt="Español" width="20"> Español
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('en')">
+            <img src="./imagenes/eeuu.png" alt="English" width="20"> English 
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+</section>
+<section class="borrar1 mt-2">
+  <div class="container-fluid text-center ">
+    <div class="row m-auto fw-bold bg-yellow-light py-2 ">
+        <div class="col-md-4">
+            <a class=" borrar" href="./index.html"> <img  id="" class=" fw-bold  " src="./imagenes/home.svg" alt=""width="50px">Volver al Inicio</a> 
+        </div>
+        <div class="col-md-4">
+            <img  id="reproducir-frase" class="text-center" src="./imagenes/play-circle-outline.svg" alt=""width="50px">  Reproducir   
+        </div>
+        <div class="col-md-4">
+            <img class="text-center" id="limpiar-frase" src="./imagenes/trash-outline.svg" alt="" width="48px"> Borrar
+          
+        </div>
+       
+    </div>
+    <div class="d-flex flex-wrap mt-2  border p-3" id="phrase-container"> </div>
+</div>
+  
+</section>
+-->
+<section class="borrar1 mt-1">
+  <div class="container-fluid mt-1">
+    <div class="row m-auto">
+      <div class="col-md-12">
+        <h5 class="fw-bold bg-yellow-light py-1 text-center">
+          <a class="borrar mx-2" href="./index.html"> 
+            <img class="fw-bold" src="./imagenes/home.svg" alt="" width="50px"> Volver al Inicio
+          </a> 
+          <img id="reproducir-frase" class="mx-2" src="./imagenes/play-circle-outline.svg" alt="" width="60px">Reproducir
+          <img class="mx-2" id="limpiar-frase" src="./imagenes/trash-outline.svg" alt="" width="47px">Borrar
+        </h5>
+        
+        <div class="d-flex flex-wrap mb-3 border p-1" id="phrase-container"></div>
+      </div>
+    </div>
+  </div>
+
+
+    
+    
+
+    <div class="container-fluid general mt-1" >
+        <div class="row m-auto">
+          <div class="col col-lg-1 text-center">
+           <img src="./imagenes/portada/hola.png" alt="hola" class="pictograma bg-orange-pastel" data-word="hola" width="80" id="hola1">
+           <p id="hola" class="fw-bold text-center parrafos">HOLA</p>
+         </div>
+         <div class="col  col-lg-1 text-center" >
+            <img src="./imagenes/portada/yo.png" alt="yo" class="pictograma bg-light-green" data-word="yo" width="80" id="yo1" >
+            <p id="yo"  class="fw-bold text-center parrafos">YO</p>
+          </div>
+          <div class="col col-lg-1 text-center">
+            <img src="./imagenes/portada/tú.png" alt="tú" class="pictograma bg-light-green" data-word="tú" width="80" id="tu1">
+            <p id="tu" class="fw-bold text-center parrafos">TÚ</p>
+          </div>
+          <div class="col  col-lg-1 text-center">
+            <img src="./imagenes/portada/el.png" alt="él" class="pictograma bg-light-green" data-word="él" width="80" id="el">
+            <p  id="el" class="fw-bold text-center parrafos">ÉL</p>
+          </div>
+          <div class="col col-lg-1 text-center">
+            <img src="./imagenes/portada/sí.png" alt="sí" class="pictograma btn-dont-want" data-word="sí" width="80" id="si1">
+            <p id="si" class="fw-bold text-center parrafos">SÍ</p>
+          </div>
+          <div class="col col-lg-1 text-center">
+            <img src="./imagenes/portada/no.png" alt="no" class="pictograma btn-dont-want" data-word="no" width="80" id="no1">
+            <p  id="no" class="fw-bold text-center parrafos">NO</p>
+          </div> 
+          <div class="col col-lg-1 text-center">
+            <img src="./imagenes/portada/megusta.png" alt="me gusta" class="pictograma bg-blue-pastel" data-word="me gusta" width="80" id="megustaa" > 
+            <p id="megusta" class="fw-bold text-center parrafos">ME GUSTA</p>
+          </div>
+          <div class="col col-lg-1 text-center">
+            <img src="./imagenes/portada/nomegusta.png" alt="no me gusta" class="pictograma bg-blue-pastel" data-word="no me gusta" width="80" id="nomegustaa">
+            <p id="nomegusta1" class="fw-bold text-center parrafos">NO ME GUSTA</p>
+          </div>
+          <div class="col col-lg-1 text-center">
+            <img src="./imagenes/portada/comoestas.png" alt="cómo estás" class="pictograma bg-blue-pastel" data-word="cómo estás" width="80" id="comoestass">
+            <p  id="comoestas" class="fw-bold text-center parrafos1">¿CÓMO ESTÁS?</p>
+          </div>
+          <div class="col col-lg-1 text-center"  id="numeros" >
+            <img src="./imagenes/numeros/números.png" alt="cómo estás" class="pictogramacarpeta bg-light-purple" data-word="números" width="80" id="numeros-link">
+            <p id="numeros1" class="fw-bold text-center parrafos1">NÚMEROS</p>
+          </div>  
+           <!-- Modal para selección de numeros --> 
+          <div class="modal fade" id="numerosModal" tabindex="-" aria-labelledby="numerosModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title fw-bold" id="numerosModalLabel">Selecciona un número</h5>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                 <!-- Pictogramas de colores -->
+                 <div class="row">
+                   <div class="col text-center">
+                     <img src="./imagenes/numeros/0.png" alt="numero" class="pictograma" data-word="cero" width="80">
+                     <p class="fw-bold">CERO</p>
+                   </div>
+                   <div class="col text-center">
+                    <img src="./imagenes/numeros/1.png" alt="numero" class="pictograma" data-word="uno" width="80">
+                    <p  class="fw-bold">UNO</p>
+                  </div>
+                  <div class="col text-center">
+                    <img src="./imagenes/numeros/2.png" alt="numero" class="pictograma" data-word="dos" width="80">
+                    <p class="fw-bold">DOS</p>
+                  </div>
+                  <div class="col text-center">
+                    <img src="./imagenes/numeros/3.png" alt="numero" class="pictograma" data-word="tres" width="80">
+                    <p  class="fw-bold">TRES</p>
+                  </div>
+                  <div class="col text-center">
+                    <img src="./imagenes/numeros/4.png" alt="numero" class="pictograma" data-word="cuatro" width="80">
+                    <p class="fw-bold">CUATRO</p>
+                  </div>
+                  <div class="col text-center">
+                    <img src="./imagenes/numeros/5.png" alt="numero" class="pictograma" data-word="cinco" width="80">
+                    <p  class="fw-bold">CINCO</p>
+                  </div>
+                  <div class="col text-center">
+                    <img src="./imagenes/numeros/6.png" alt="numero" class="pictograma" data-word="seis" width="80">
+                    <p class="fw-bold">SEIS</p>
+                  </div>
+                  <div class="col text-center">
+                    <img src="./imagenes/numeros/7.png" alt="numero" class="pictograma" data-word="siete" width="80">
+                    <p class="fw-bold">SIETE</p>
+                  </div>
+                  <div class="col text-center">
+                    <img src="./imagenes/numeros/8.png" alt="numero" class="pictograma" data-word="ocho" width="80">
+                    <p  class="fw-bold">OCHO</p>
+                  </div>
+                  <div class="col text-center">
+                    <img src="./imagenes/numeros/9.png" alt="numero" class="pictograma" data-word="nueve" width="80">
+                    <p  class="fw-bold"> NUEVE</p>
+                  </div>
+                  <div class="col text-center">
+                    <img src="./imagenes/numeros/10.png" alt="numero" class="pictograma" data-word="diez" width="80">
+                    <p  class="fw-bold">DIEZ</p>
+                  </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div> 
+         
+         
+          
+          <div class="col col-lg-1 text-center">
+            <img src="./imagenes/portada/alimentos.png" alt="alimentos" class="pictograma bg-light-purple" data-word="alimentos" width="80" id="alimentos1">
+            <p id="alimentos" class="fw-bold text-center parrafos">ALIMENTOS</p>
+          </div>
+          <div class="col col-lg-1 text-center " id="colores">
+              <a href="#" id="colores-link"><img  src="./imagenes/Colores/colores.png" alt="Colores" class="pictogramacarpeta bg-light-purple" data-word="colores" width="80"></a>
+              <p  id="colores1" class="fw-bold text-center parrafos">COLORES</p>
+          </div>
+               <!-- Modal para selección de colores --> 
+               <div class="modal fade" id="colorModal" tabindex="-" aria-labelledby="colorModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title fw-bold" id="colorModalLabel">SELECCIONA UN COLOR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- Pictogramas de colores -->
+                      <div class="row">
+                        <div class="col text-center">
+                          <img src="./imagenes/Colores/verde.png" alt="Verde" class=" pictograma border " data-word="verde" width="80">
+                          <p id=""class="fw-bold text-center parrafos">VERDE</p>
+                        </div>
+                        <div class="col text-center">
+                          <img src="./imagenes/Colores/verde claro.png" alt="Verde Claro" class="pictograma border" data-word="verde claro" width="80">
+                          <p id=""class="fw-bold text-center parrafos">VERDE CLARO</p>
+                        </div>
+                        <div class="col text-center">
+                          <img src="./imagenes/Colores/amarillo.png" alt="Amarillo" class="pictograma border" data-word="amarillo" width="80">
+                          <p id=""class="fw-bold text-center parrafos">AMARILLO</p>
+                        </div>
+                        <div class="col text-center">
+                          <img src="./imagenes/Colores/rojo.png" alt="Rojo" class="pictograma border" data-word="rojo" width="80">
+                          <p id=""class="fw-bold text-center parrafos">ROJO</p>
+                        </div>
+                        <div class="col text-center">
+                          <img src="./imagenes/Colores/marrón.png" alt="Marrón" class="pictograma border" data-word="marrón" width="80">
+                          <p id=""class="fw-bold text-center parrafos">MARRÓN</p>
+                        </div>
+                        <div class="col text-center">
+                          <img src="./imagenes/Colores/morado.png" alt="Morado" class="pictograma border" data-word="morado" width="80">
+                          <p id=""class="fw-bold text-center parrafos">MORADO</p>
+                        </div>
+                        <div class="col text-center">
+                          <img src="./imagenes/Colores/lila.png" alt="Lila" class="pictograma border" data-word="lila" width="80">
+                          <p id=""class="fw-bold text-center parrafos">LILA</p>
+                        </div>
+                        <div class="col text-center">
+                          <img src="./imagenes/Colores/blanco.png" alt="Blanco" class="pictograma border" data-word="blanco" width="80">
+                          <p id=""class="fw-bold text-center parrafos">BLANCO</p>
+                        </div>
+                        <div class="col text-center">
+                          <img src="./imagenes/Colores/negro.png" alt="Negro" class="pictograma border" data-word="negro" width="80">
+                          <p id=""class="fw-bold text-center parrafos">NEGRO</p>
+                        </div>
+                        <div class="col text-center">
+                          <img src="./imagenes/Colores/plateado.png" alt="Plateado" class="pictograma border" data-word="plateado" width="80">
+                          <p id=""class="fw-bold text-center parrafos">PLATEADO</p>
+                        </div>
+                        <div class="col text-center">
+                          <img src="./imagenes/Colores/dorado.png" alt="Dorado" class="pictograma border" data-word="dorado" width="80">
+                          <p id=""class="fw-bold text-center parrafos">DORADO</p>
+                        </div>
+                        <div class="col text-center">
+                          <img src="./imagenes/Colores/rosa.png" alt="Rosa" class="pictograma border" data-word="rosa" width="80">
+                          <p id=""class="fw-bold text-center parrafos">ROSA</p>
+                        </div>
+                        <div class="col text-center">
+                          <img src="./imagenes/Colores/azul.png" alt="Azul" class="pictograma border" data-word="azul" width="80">
+                          <p id=""class="fw-bold text-center parrafos">AZUL</p>
+                        </div>
+                         <div class="col text-center">
+                          <img src="./imagenes/Colores/naranja.png" alt="Azul" class="pictograma border" data-word="Naranja" width="80">
+                          <p id=""class="fw-bold text-center parrafos">NARANJA</p>
+                        </div>
+                        <div class="col text-center">
+                            <img src="./imagenes/Colores/gris.png" alt="Azul" class="pictograma border" data-word="gris" width="80">
+                            <p id=""class="fw-bold text-center parrafos">GRIS</p>
+                          </div>
+                          <div class="col text-center">
+                            <img src="./imagenes/Colores/colores.png" alt="Azul" class="pictograma border" data-word="colores" width="80">
+                            <p id=""class="fw-bold text-center parrafos">COLORES</p>
+                          </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              
+           
+      <div class="col col-lg-1 text-center">
+          <img src="./imagenes/portada/buendia.png" alt="nosotros" class="pictograma bg-orange-pastel" data-word="buendia" width="80" id="buendia">
+          <p id="buendia" class="fw-bold text-center parrafos ">BUEN DÍA</p>
+        </div>
+      <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/ellos.png" alt="ellos" class="pictograma bg-light-green" data-word="ellos" width="80" id="ellos">
+        <p class="fw-bold text-center parrafos">ELLOS</p>
+      </div>
+      <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/nosotros.png" alt="nosotros" class="pictograma bg-light-green" data-word="nosotros" width="80" id="nosotross">
+        <p class="fw-bold text-center parrafos">NOSOTROS</p>
+      </div>
+       <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/hacer.png" alt="hacer" class="pictograma bg-yellow-light" data-word="hacer" width="80" id="hacer">
+        <p class="fw-bold text-center parrafos">HACER</p>
+      </div>
+       <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/bien.png" alt="bien" class="pictograma bg-blue-pastel" data-word="bien" width="80" id="bien">
+        <p class="fw-bold text-center parrafos">BIEN</p>
+      </div>
+       <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/mal.png" alt="mal" class="pictograma bg-blue-pastel" data-word="mal" width="80" id="mal">
+        <p class="fw-bold text-center parrafos">MAL</p>
+      </div>
+      <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/lindo.png" alt="lindo" class="pictograma bg-blue-pastel" data-word="lindo" width="80" id="lindo">
+        <p class="fw-bold text-center parrafos">LINDO</p>
+      </div>
+      <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/grande.png" alt="grande" class="pictograma bg-blue-pastel" data-word="grande" width="80" id="grande">
+        <p class="fw-bold text-center parrafos">GRANDE</p>
+      </div>
+      <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/pequeño.png" alt="pequeño" class="pictograma bg-blue-pastel" data-word="pequeño" width="80" id="pequeño">
+        <p class="fw-bold text-center parrafos">PEQUEÑO</p>
+      </div>
+      <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/gracias.png" alt="gracias" class="pictograma bg-blue-pastel" data-word="gracias" width="80" id="graciass">
+        <p class="fw-bold text-center parrafos">GRACIAS</p>
+      </div>
+      <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/bebidas.png" alt="gracias" class="pictograma  bg-light-purple" data-word="bebidas" width="80" id="bebidas">
+        <p class="fw-bold text-center parrafos">BEBIDAS</p>
+      </div>
+     
+      <div class="col col-lg-1 text-center" id="animales">
+        <img src="./imagenes/portada/animales.png" alt="animales" class="pictogramacarpeta bg-light-purple" data-word="animales" width="80" id="animales-link">
+        <p class="fw-bold text-center parrafos">ANIMALES</p>
+      </div>
+        <!-- Modal para selección de animales --> 
+        <div class="modal fade" id="animalesModal" tabindex="-" aria-labelledby="animalesModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="animalesModalLabel">SELECCIONA UN ANIMAL</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+                <!-- Pictogramas de animales -->
+                <div class="row">
+                  <div class="col text-center">
+                    <img src="./imagenes/animales/gato doméstico.png" alt="gato" class="pictograma border bg-pink-pastel " data-word="gato"  id="gato">
+                    <p id=""class="fw-bold text-center parrafos">GATO</p>
+                </div>
+                <div class="col  text-center">
+                    <img src="./imagenes/animales/perro.png" alt="perro" class="pictograma border bg-pink-pastel " data-word="perro"  id="perro">
+                    <p id=""class="fw-bold text-center parrafos">PERRO</p>
+                </div> <div class="col text-center">
+                    <img src="./imagenes/animales/zorro.png" alt="zorro" class="pictograma border bg-pink-pastel" data-word="zorro" id="zorro">
+                    <p class="fw-bold text-center parrafos">ZORRO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/tortuga.png" alt="tortuga" class="pictograma border bg-pink-pastel" data-word="tortuga" id="tortuga">
+                    <p class="fw-bold text-center parrafos">TORTUGA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/serpiente.png" alt="serpiente" class="pictograma border bg-pink-pastel" data-word="serpiente" id="serpiente">
+                    <p class="fw-bold text-center parrafos">SERPIENTE</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/ratón.png" alt="ratón" class="pictograma border bg-pink-pastel" data-word="ratón" id="raton">
+                    <p class="fw-bold text-center parrafos">RATÓN</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/pulpo.png" alt="pulpo" class="pictograma border bg-pink-pastel" data-word="pulpo" id="pulpo">
+                    <p class="fw-bold text-center parrafos">PULPO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/pingüino.png" alt="pingüino" class="pictograma border bg-pink-pastel" data-word="pingüino" id="pinguino">
+                    <p class="fw-bold text-center parrafos">PINGÜINO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/pato.png" alt="pato" class="pictograma border bg-pink-pastel" data-word="pato" id="pato">
+                    <p class="fw-bold text-center parrafos">PATO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/oveja.png" alt="oveja" class="pictograma border bg-pink-pastel" data-word="oveja" id="oveja">
+                    <p class="fw-bold text-center parrafos">OVEJA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/mono.png" alt="mono" class="pictograma border bg-pink-pastel" data-word="mono" id="mono">
+                    <p class="fw-bold text-center parrafos">MONO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/jirafa.png" alt="jirafa" class="pictograma border bg-pink-pastel" data-word="jirafa" id="jirafa">
+                    <p class="fw-bold text-center parrafos">JIRAFA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/hipopótamo.png" alt="hipopótamo" class="pictograma border bg-pink-pastel" data-word="hipopótamo" id="hipopotamo">
+                    <p class="fw-bold text-center parrafos">HIPOPÓTAMO</p>
+                </div>
+                           
+                <div class="col text-center">
+                    <img src="./imagenes/animales/foca.png" alt="foca" class="pictograma border bg-pink-pastel" data-word="foca" id="foca">
+                    <p class="fw-bold text-center parrafos">FOCA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/delfín.png" alt="delfín" class="pictograma border bg-pink-pastel" data-word="delfín" id="delfin">
+                    <p class="fw-bold text-center parrafos">DELFÍN</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/conejo.png" alt="conejo" class="pictograma border bg-pink-pastel" data-word="conejo" id="conejo">
+                    <p class="fw-bold text-center parrafos">CONEJO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/cebra.png" alt="cebra" class="pictograma border bg-pink-pastel" data-word="cebra" id="cebra">
+                    <p class="fw-bold text-center parrafos">CEBRA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/caballo.png" alt="caballo" class="pictograma border bg-pink-pastel" data-word="caballo" id="caballo">
+                    <p class="fw-bold text-center parrafos">CABALLO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/toro.png" alt="toro" class="pictograma border bg-pink-pastel" data-word="toro" id="toro">
+                    <p class="fw-bold text-center parrafos">TORO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/sapo.png" alt="sapo" class="pictograma border bg-pink-pastel" data-word="sapo" id="sapo">
+                    <p class="fw-bold text-center parrafos">SAPO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/rana.png" alt="rana" class="pictograma border bg-pink-pastel" data-word="rana" id="rana">
+                    <p class="fw-bold text-center parrafos">RANA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/pollo.png" alt="pollo" class="pictograma border bg-pink-pastel" data-word="pollo" id="pollo">
+                    <p class="fw-bold text-center parrafos">POLLO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/periquito.png" alt="periquito" class="pictograma border bg-pink-pastel" data-word="periquito" id="periquito">
+                    <p class="fw-bold text-center parrafos">PERIQUITO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/paloma.png" alt="paloma" class="pictograma border bg-pink-pastel" data-word="paloma" id="paloma">
+                    <p class="fw-bold text-center parrafos">PALOMA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/oso.png" alt="oso" class="pictograma border bg-pink-pastel" data-word="oso" id="oso">
+                    <p class="fw-bold text-center parrafos">OSO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/mariquita.png" alt="mariquita" class="pictograma border bg-pink-pastel" data-word="mariquita" id="mariquita">
+                    <p class="fw-bold text-center parrafos">MARIQUITA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/leona.png" alt="leona" class="pictograma border bg-pink-pastel" data-word="leona" id="leona">
+                    <p class="fw-bold text-center parrafos">LEONA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/león.png" alt="león" class="pictograma border bg-pink-pastel" data-word="león" id="leon">
+                    <p class="fw-bold text-center parrafos">LEÓN</p>
+                </div>
+    
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/gallina.png" alt="gallina" class="pictograma border bg-pink-pastel" data-word="gallina" id="gallina">
+                    <p class="fw-bold text-center parrafos">GALLINA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/gallo.png" alt="gallo" class="pictograma border bg-pink-pastel" data-word="gallo" id="gallo">
+                    <p class="fw-bold text-center parrafos">GALLO</p>
+                </div>
+                <div class="col text-center">
+                    <img src="./imagenes/animales/tarántula.png" alt="tarántula" class="pictograma border bg-pink-pastel" data-word="araña" id="tarantula">
+                    <p class="fw-bold text-center parrafos">ARAÑA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/vaca.png" alt="vaca" class="pictograma border bg-pink-pastel" data-word="vaca" id="vaca">
+                    <p class="fw-bold text-center parrafos">VACA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/puma.png" alt="puma" class="pictograma border bg-pink-pastel" data-word="puma" id="puma">
+                    <p class="fw-bold text-center parrafos">PUMA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/pez payaso.png" alt="pez payaso" class="pictograma border bg-pink-pastel" data-word="pez" id="pez">
+                    <p class="fw-bold text-center parrafos">PEZ</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/pájaro.png" alt="pájaro" class="pictograma border bg-pink-pastel" data-word="pájaro" id="pajaro">
+                    <p class="fw-bold text-center parrafos">PÁJARO</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/mosca.png" alt="mosca" class="pictograma border bg-pink-pastel" data-word="mosca" id="mosca">
+                    <p class="fw-bold text-center parrafos">MOSCA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/mariposa.png" alt="mariposa" class="pictograma border bg-pink-pastel" data-word="mariposa" id="mariposa">
+                    <p class="fw-bold text-center parrafos">MARIPOSA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/hormiga.png" alt="hormiga" class="pictograma border bg-pink-pastel" data-word="hormiga" id="hormiga">
+                    <p class="fw-bold text-center parrafos">HORMIGA</p>
+                </div>
+                <div class="col text-center">
+                    <img src="./imagenes/animales/abeja.png" alt="abeja" class="pictograma border bg-pink-pastel" data-word="abeja" id="abeja">
+                    <p class="fw-bold text-center parrafos">ABEJA</p>
+                </div>
+                <div class="col text-center">
+                    <img src="./imagenes/animales/gallina.png" alt="gallina" class="pictograma border bg-pink-pastel" data-word="gallina" id="gallina">
+                    <p class="fw-bold text-center parrafos">GALLINA</p>
+                </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/elefante.png" alt="elefante" class="pictograma border bg-pink-pastel" data-word="elefante" id="elefante">
+                    <p class="fw-bold text-center parrafos">ELEFANTE</p>
+                </div>
+            
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/cerdo.png" alt="cerdo" class="pictograma border bg-pink-pastel" data-word="cerdo" id="cerdo">
+                    <p class="fw-bold text-center parrafos">CERDO</p>
+                </div>
+
+                
+                <div class="col text-center">
+                  <img src="./imagenes/animales/leopardo.png" alt="bandada" class="pictograma border bg-pink-pastel" data-word="leopardo" id="leopardo">
+                  <p class="fw-bold text-center parrafos">LEOPARDO</p>
+              </div>
+                
+                <div class="col text-center">
+                    <img src="./imagenes/animales/loro.png" alt="loro" class="pictograma border bg-pink-pastel" data-word="loro" id="loro">
+                    <p class="fw-bold text-center parrafos">LORO</p>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+
+
+      <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/buenasnoches.png" alt="gracias" class="pictograma bg-orange-pastel" data-word="buenasnoches" width="80" id="buenasnoches">
+        <p class="fw-bold text-center parrafos2">BUENAS NOCHES</p> 
+      </div>
+      <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/ir.png" alt="ir" class="pictograma bg-yellow-light" data-word="ir" width="80" id="ir">
+        <p class="fw-bold text-center parrafos">IR</p>
+       </div>
+        <div class="col col-lg-1 text-center">
+          <img src="./imagenes/portada/quiero.png" alt="quiero" class="pictograma bg-yellow-light" data-word="quiero" width="80" id="quieroo">
+          <p class="fw-bold text-center parrafos">QUIERO</p>
+        </div>
+      
+      <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/poner.png" alt="poner" class="pictograma bg-yellow-light" data-word="poner" width="80"id="poner">
+        <p class="fw-bold text-center parrafos">PONER</p>
+      </div>
+      <div class="col col-lg-1 text-center">
+        <img src="./imagenes/portada/tener.png" alt="poner" class="pictograma bg-yellow-light" data-word="tengo" width="80"id="tengo">
+        <p class="fw-bold text-center parrafos">TENGO</p>
+      </div>
+      <div class="col col-lg-1 text-center">
+        <img src="./imagenes/sentimientos/contento.png" alt="Feliz" class="pictograma bg-blue-pastel" data-word="felíz" width="80" id="feliz"> 
+        <p class="fw-bold text-center parrafos">FELÍZ</p>
+    </div>
+    <div class="col col-lg-1 text-center">
+        <img src="./imagenes/sentimientos/enfado.png" alt="Enojado" class="pictograma bg-blue-pastel" data-word="enojado" width="80" id="enojado">
+        <p class="fw-bold text-center parrafos">ENOJADO</p>
+    </div>
+    <div class="col col-lg-1 text-center">
+      <img src="./imagenes/portada/amar.png" alt="Enojado" class="pictograma bg-blue-pastel" data-word="teamo" width="80" id="teamo">
+      <p class="fw-bold text-center parrafos">TE AMO</p>
+     </div>
+     <!-- Categoría: Emociones -->
+<div class="col col-lg-1 text-center" >
+  <a href="#" id="emociones-link"><img src="./imagenes/portada/emociones.png" alt="emociones" class="pictogramacarpeta bg-blue-pastel" data-word="emociones" width="80" id="masemociones"></a>
+  <p  id="masemociones"class="fw-bold text-center parrafos">+EMOCIONES</p>
+</div>
+
+<!-- Modal para selección de emociones --> 
+<div class="modal fade" id="emocionesModal" tabindex="-" aria-labelledby="emocionesModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold text-center" id="emocionesModalLabel">Seleccioná una Emoción</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Pictogramas de emociones -->
+        <div class="row ">
+         
+            <div class="col  text-center">
+              <img src="./imagenes/sentimientos/contento.png" alt="Feliz" class="pictograma border bg-blue-pastel " data-word="felíz" width="80" id="feliz">
+              <p id="" class="fw-bold text-center parrafos">FELÍZ</p>
+          </div>
+          <div class="col  text-center">
+              <img src="./imagenes/sentimientos/enfado.png" alt="Enojado" class="pictograma border bg-blue-pastel " data-word="enojado" width="80" id="enojado">
+              <p class="fw-bold text-center parrafos">ENOJADO</p>
+          </div>
+          <div class="col  text-center">
+            <img src="./imagenes/sentimientos/emocionado.png" alt="emocionado" class="pictograma border bg-blue-pastel " data-word="muy contento" width="80" id="emocionado">
+            <p id="" class="fw-bold text-center parrafos">MUY CONTENTO</p>
+        </div>
+          <div class="col  text-center">
+              <img src="./imagenes/sentimientos/llorar.png" alt="Triste" class="pictograma  border bg-blue-pastel" data-word="triste" width="80" id="triste">
+              <p class="fw-bold text-center parrafos">TRISTE</p>
+          </div>
+          <div class="col  text-center">
+              <img src="./imagenes/sentimientos/enamorado.png" alt="Amor" class="pictograma  border bg-blue-pastel " data-word="enamorado" width="80">
+              <p class="fw-bold text-center parrafos">ENAMORADO</p>
+          </div>
+          <div class="col  text-center">
+              <img src="./imagenes/sentimientos/asco.png" alt="Asco" class="pictograma  border bg-blue-pastel" data-word="con asco" width="80">
+              <p class="fw-bold text-center parrafos">CON ASCO</p>
+          </div>
+          <div class="col text-center">
+              <img src="./imagenes/sentimientos/ansioso.png" alt="Ansioso" class="pictograma  border bg-blue-pastel" data-word="ansioso" width="80">
+              <p class="fw-bold text-center parrafos">ANSIOSO</p>
+          </div>
+          <div class="col text-center">
+              <img src="./imagenes/sentimientos/avergonzar.png" alt="Vergüenza" class="pictograma  border bg-blue-pastel " data-word="avergonzado" width="80">
+              <p class="fw-bold text-center parrafos">AVERGONZADO</p>
+          </div>
+          <div class="col text-center">
+              <img src="./imagenes/sentimientos/confusión.png" alt="Confusión" class="pictograma  border bg-blue-pastel " data-word="confundido" width="80">
+              <p class="fw-bold text-center parrafos">CONFUNDIDO</p>
+          </div>
+          <div class="col text-center">
+              <img src="./imagenes/sentimientos/aburrimiento.png" alt="Aburrido" class="pictograma  border bg-blue-pastel" data-word="aburrido" width="80">
+              <p class="fw-bold text-center parrafos">ABURRIDO</p>
+          </div>
+         
+          <div class="col text-center">
+              <img src="./imagenes/sentimientos/tener miedo.png" alt="asustado" class="pictograma  border bg-blue-pastel " data-word="asustado" width="80">
+              <p class="fw-bold text-center parrafos">ASUSTADO</p>
+          </div>
+          <div class="col text-center">
+              <img src="./imagenes/sentimientos/solo.png" alt="Muy Enojado" class="pictograma  border bg-blue-pastel" data-word="solo" width="80">
+              <p class="fw-bold text-center parrafos">SOLO</p>
+          </div>
+          <div class="col text-center">
+              <img src="./imagenes/sentimientos/divertir.png" alt="Divertido" class="pictograma  border bg-blue-pastel" data-word="divertido" width="80">
+              <p class="fw-bold text-center parrafos">DIVERTIDO</p>
+          </div>
+      
+          <div class="col  text-center"> 
+            <img src="./imagenes/sentimientos/saturado.png" alt="Saturado" class="pictograma border bg-blue-pastel" data-word="aturdido" width="80">
+              <p class="fw-bold text-center parrafos">ATURDIDO</p>
+          </div>
+          <div class="col  text-center">
+              <img src="./imagenes/sentimientos/sorpresa.png" alt="Sorpresa" class="pictograma  border bg-blue-pastel" data-word="sorprendido" width="80">
+              <p class="fw-bold text-center parrafos">SORPRENDIDO</p>
+          </div>
+          <div class="col text-center">
+              <img src="./imagenes/sentimientos/envidia.png" alt="Envidia" class="pictograma  border bg-blue-pastel" data-word="envidioso" width="80">
+              <p class="fw-bold text-center parrafos">ENVIDIOSO</p>
+          </div>
+        
+       <div class="col text-center">
+        <img src="./imagenes/sentimientos/mareado.png" alt="Envidia" class="pictograma  border bg-blue-pastel" data-word="mareado" width="80">
+        <p class="fw-bold text-center parrafos">MAREADO</p>
+     </div>
+     <div class="col text-center">
+      <img src="./imagenes/sentimientos/cansado.png" alt="Envidia" class="pictograma  border bg-blue-pastel" data-word="cansado" width="80">
+      <p class="fw-bold text-center parrafos">CASANDO</p>
+   </div>
+   <div class="col text-center">
+    <img src="./imagenes/sentimientos/encantado.png" alt="Envidia" class="pictograma  border bg-blue-pastel" data-word="encantado" width="80">
+    <p class="fw-bold text-center parrafos">ENCANTADO</p>
+ </div>
+ <div class="col text-center">
+  <img src="./imagenes/sentimientos/orgulloso.png" alt="Envidia" class="pictograma  border bg-blue-pastel" data-word="orgulloso de mi" width="80">
+  <p class="fw-bold text-center parrafos">ORGULLOSO DE MI</p>
+</div>
+         
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+     
+    <div class="col col-lg-1 text-center">
+      <img src="./imagenes/portada/casa.png" alt="casa" class="pictograma  bg-light-purple" data-word="casa" width="80" id="casa" >
+      <p id="casa" class="fw-bold text-center parrafos">CASA</p>
+    </div>
+
+    
+
+    <!-- Categoría: Emociones -->
+    <div class="col col-lg-1 text-center" >
+      <a href="#" id="frutas-link"><img src="./imagenes/portada/frutas.png" alt="frutas" class="pictogramacarpeta bg-light-purple " data-word="frutas" width="80" id="frutas"></a>
+      <p  id="frutas"class="fw-bold text-center parrafos">FRUTAS</p>
+    </div>
+    
+    <!-- Modal para selección de frutas --> 
+    <div class="modal fade" id="frutasModal" tabindex="-" aria-labelledby="frutasModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold text-center" id="frutasModalLabel">Seleccioná una Fruta</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Pictogramas de frutas -->
+            <div class="row ">
+             
+                <div class="col  text-center">
+                  <img src="./imagenes/frutas/manzana.png" alt="manzana" class="pictograma border bg-light-purple " data-word="manzana" width="80" id="manzana">
+                  <p id="" class="fw-bold text-center parrafos">MANZANA</p>
+              </div>
+              <div class="col text-center">
+                <img src="./imagenes/frutas/naranja.png" alt="naranja" class="pictograma border bg-light-purple" data-word="naranja" width="80" id="naranja">
+                <p class="fw-bold text-center parrafos">NARANJA</p>
+            </div>
+            <div class="col text-center">
+                <img src="./imagenes/frutas/banana.png" alt="banana" class="pictograma border bg-light-purple" data-word="banana" width="80" id="banana">
+                <p class="fw-bold text-center parrafos">BANANA</p>
+            </div>
+            <div class="col text-center">
+                <img src="./imagenes/frutas/frutilla.png" alt="frutilla" class="pictograma border bg-light-purple" data-word="frutilla" width="80" id="frutilla">
+                <p class="fw-bold text-center parrafos">FRUTILLA</p>
+            </div>
+            <div class="col text-center">
+                <img src="./imagenes/frutas/mandarina.png" alt="mandarina" class="pictograma border bg-light-purple" data-word="mandarina" width="80" id="mandarina">
+                <p class="fw-bold text-center parrafos">MANDARINA</p>
+            </div>
+            <div class="col text-center">
+                <img src="./imagenes/frutas/pera.png" alt="pera" class="pictograma border bg-light-purple" data-word="pera" width="80" id="pera">
+                <p class="fw-bold text-center parrafos">PERA</p>
+            </div>
+            <div class="col text-center">
+                <img src="./imagenes/frutas/cereza.png" alt="cereza" class="pictograma border bg-light-purple" data-word="cereza" width="80" id="cereza">
+                <p class="fw-bold text-center parrafos">CEREZA</p>
+            </div>
+            <div class="col text-center">
+                <img src="./imagenes/frutas/melon.png" alt="melon" class="pictograma border bg-light-purple" data-word="melón" width="80" id="melon">
+                <p class="fw-bold text-center parrafos">MELÓN</p>
+            </div>
+            <div class="col text-center">
+                <img src="./imagenes/frutas/durazno.png" alt="durazno" class="pictograma border bg-light-purple" data-word="durazno" width="80" id="durazno">
+                <p class="fw-bold text-center parrafos">DURAZNO</p>
+            </div>
+            <div class="col text-center">
+                <img src="./imagenes/frutas/sandia.png" alt="sandia" class="pictograma border bg-light-purple" data-word="sandía" width="80" id="sandia">
+                <p class="fw-bold text-center parrafos">SANDÍA</p>
+            </div>
+            <div class="col text-center">
+                <img src="./imagenes/frutas/piña.png" alt="piña" class="pictograma border bg-light-purple" data-word="piña" width="80" id="pina">
+                <p class="fw-bold text-center parrafos">PIÑA</p>
+            </div>
+            <div class="col text-center">
+                <img src="./imagenes/frutas/uvas.png" alt="uvas" class="pictograma border bg-light-purple" data-word="uvas" width="80" id="uvas">
+                <p class="fw-bold text-center parrafos">UVAS</p>
+            </div>
+            
+     
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+
+
+    <div class="col col-lg-1 text-center">
+      <img src="./imagenes/portada/ropa.png" alt="calendario" class="pictograma  bg-light-purple" data-word="calendario" width="80" id="ropa">
+      <p id="ropas" class="fw-bold text-center parrafos">ROPA</p>
+    </div>
+    <div class="col col-lg-1 text-center">
+      <img src="./imagenes/portada/chau.png" alt="chau" class="pictograma bg-orange-pastel" data-word="chau" width="80" id="chau">
+      <p class="fw-bold text-center parrafos">CHAU</p>
+    </div>
+    <div class="col col-lg-1 text-center">
+      <img src="./imagenes/portada/es.png" alt="ir al baño" class="pictograma bg-yellow-light" data-word="es" width="80" id="es">
+      <p class="fw-bold text-center parrafos">ES</p>
+    </div>
+    <div class="col col-lg-1 text-center">
+      <img src="./imagenes/portada/soy.png" alt="soy" class="pictograma bg-yellow-light" data-word="soy" width="80" id="soy" >
+      <p id="soy" class="fw-bold text-center parrafos">SOY</p>
+    </div>
+    <div class="col col-lg-1 text-center">
+      <img src="./imagenes/portada/estar.png" alt="ir al baño" class="pictograma bg-yellow-light" data-word="estoy" width="80" id="estoy">
+      <p class="fw-bold text-center parrafos">ESTOY</p>
+    </div> 
+     
+    <div class="col col-lg-1 text-center">
+      <img src="./imagenes/portada/acciones.png" alt="ir al baño" class="pictograma bg-yellow-light" data-word="mas acciones" width="80" id="+acciones">
+      <p class="fw-bold  parrafos1">+ACCIONES</p>
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+        <div class="col col-lg-1 text-center">
+          <img src="./imagenes/portada/más.png" alt="más" class="pictograma bg-blue-pastel" data-word="más" width="80" id="mas">
+          <p class="fw-bold text-center parrafos">MÁS</p>
+        </div>
+        <div class="col col-lg-1 text-center">
+          <img src="./imagenes/portada/menos.png" alt="menos" class="pictograma bg-blue-pastel" data-word="menos" width="80" id="menos">
+          <p class="fw-bold text-center parrafos">MENOS</p>
+        </div>
+        <div class="col col-lg-1 text-center">
+          <img src="./imagenes/portada/escuela.png" alt="objetos" class="pictograma  bg-light-purple" data-word="escuela" width="80" id="escuela4">
+          <p id="escuela" class="fw-bold text-center parrafos">ESCUELA</p>
+        </div>
+        <div class="col col-lg-1 text-center">
+          <img src="./imagenes/portada/objetos.png" alt="objetos" class="pictograma  bg-light-purple" data-word="objetos" width="80" id="objetos" >
+          <p id="objetos" class="fw-bold text-center parrafos">OBJETOS</p>
+        </div>
+
+        <div class="col col-lg-1 text-center" >
+          <img src="./imagenes/portada/familia.png" alt="familia" class="pictograma  bg-light-purple" data-word="familia" width="80" id="familia">
+          <p id="familia" class="fw-bold text-center parrafos">FAMILIA</p>
+        </div>
+
+        <div class="col col-lg-1 text-center">
+          <img src="./imagenes/portada/calendario.png" alt="calendario" class="pictograma  bg-light-purple" data-word="calendario" width="80" id="calendario">
+          <p id="calendario" class="fw-bold text-center parrafos">CALENDARIO</p>
+        </div>
+
+
+       
+
+        <div class="col col-lg-1 text-center" >
+          <a href="#" id="preposiciones-link"><img src="./imagenes/portada/A.png" alt="preposiciones" class="pictogramacarpeta bg-light-purple" data-word="preposiciones" width="80" id="preposiciones"></a>
+          <p  id="preposiciones"class="fw-bold text-center parrafos">PREPOSICONES</p>
+        </div>
+         <!-- Modal para selección de preposciones --> 
+        <div class="modal fade" id="preposicionesModal" tabindex="-" aria-labelledby="preposicionesModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-header">
+               <h5 class="modal-title fw-bold" id="preposicionesModalLabel">SELECCIONA UN CONECTOR</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+               <!-- Pictogramas de preposiciones-->
+               <div class="row">
+                <div class="col text-center">
+                  <H1><button class="pictograma border " data-word="A" width="80" >A</button></H1>  
+                </div>
+                <div class="col text-center">
+                    <H1><button class="pictograma border " data-word="DE" width="80" >DE</button></H1>  
+                  </div>
+                  <div class="col text-center">
+                    <H1><button class="pictograma border" data-word="CON" width="80" >CON</button></H1>  
+                  </div>
+                  <div class="col text-center">
+                    <H1><button  class="pictograma border" data-word="LA" width="80" >LA</button></H1>  
+                  </div>
+                  <div class="col text-center">
+                    <H1><button  class="pictograma border" data-word="Y" width="80" >Y</button></H1>  
+                  </div>
+                  <div class="col text-center">
+                    <H1><button class="pictograma border" data-word="LOS" width="80" >LOS</button></H1>  
+                  </div>
+                  <div class="col text-center">
+                    <H1><button  class="pictograma border " data-word="ME" width="80" >ME</button></H1>  
+                  </div>
+                  <div class="col text-center">
+                    <H1><button  class="pictograma border " data-word="ELLA" width="80" >ELLA</button></H1>  
+                  </div>
+                  <div class="col text-center">
+                    <H1><button  class="pictograma border " data-word="GRAN" width="80" >GRAN</button></H1>  
+                  </div>
+                
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+        </div>
+    </div>
+
+
+     
+    
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9SKddQX2zglP4WLP6U6Cq4U4ZV7eQ3FzyK0ttf8TZJ7dbP68S46" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-w76AibP9gyb2EGG4x5fOU0MAtcU0Kv3pF4/7Xrrd3NH4phMzE4XzN2XyK5gHfN9Yb" crossorigin="anonymous"></script>
+
+</body>

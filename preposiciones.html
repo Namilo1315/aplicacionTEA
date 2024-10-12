@@ -1,0 +1,155 @@
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictograma </title>
+    <link rel="icon" type="image/jpg" href="./imagenes/caragrande.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .btn-return { background-color: #ff2534; color: #000; }
+        .btn-want { background-color: #33db44; color: #000; }
+        .btn-dont-want { background-color: #f0f0f0; color: #000; }
+        .btn-like { background-color: #28accd; color: #000; }
+        .btn-dislike { background-color: #ffcc25; color: #000; }
+        .btn-thanks { background-color: #f7eb65; color: #000; }
+        .btn-please { background-color: #44dfd5; color: #000; }
+        .bg-blue-pastel { background-color: #7ec1e4; color: #000; }
+        .bg-yellow-pastel { background-color: #f5d63c; color: #000; }
+        .bg-green-pastel { background-color: #43fb55; color: #000; }
+        .bg-orange { background-color: #f6ba85; color: #000; }
+        .bg-pink-pastel { background-color: #f4878f; color: #000; }
+        .bg-light-blue { background-color: #48b4cf; color: #000; }
+        .bg-light-green { background-color: #72cf44; color: #000; }
+        .bg-light-purple { background-color: #e47474; color: #000; }
+        .bg-yellow-light { background-color: #f7eb65; color: #000; }
+        .bg-turquoise { background-color: #44dfd5; color: #000; }
+        .bg-coral-light { background-color: #f6c170; color: #000; }
+        .bg-mint { background-color: #ff3c23db; color: #000; }
+    </style>
+<body>
+ <!-- Categoría: Pronombres col-lg-1 col-md-3 col-sm-3 col-xs-4 -->
+    
+
+
+  <!-- Selector de idioma 
+   <div class="container-fluid text-center">
+    <div class="dropdown text-end">
+      <button class="btn btn-light dropdown-toggle btn-sm " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="./imagenes/argetina.png" alt="" width="20px">
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('es')">
+            <img src="./imagenes/argetina.png" alt="Español" width="20"> Español
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('en')">
+            <img src="./imagenes/eeuu.png" alt="English" width="20"> English 
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+ 
+
+
+<div class="container-fluid text-center mt-2 ">
+    <div class="row m-auto fw-bold bg-yellow-light py-2 ">
+        <div class="col-md-4">
+            <a class=" borrar" href="./index.html"> <img  id="" class=" fw-bold  " src="./imagenes/home.svg" alt=""width="50px">Volver al Inicio</a> 
+        </div>
+        <div class="col-md-4">
+            <img  id="reproducir-frase" class="text-center" src="./imagenes/play-circle-outline.svg" alt=""width="50px">  Reproducir   
+        </div>
+        <div class="col-md-4">
+            <img class="text-center" id="limpiar-frase" src="./imagenes/trash-outline.svg" alt="" width="48px"> Borrar
+          
+        </div>
+       
+    </div>
+    <div class="d-flex flex-wrap mt-2  border p-3" id="phrase-container"> </div>
+</div>
+-->
+<div class="container-fluid  mt-1">
+    <div class="row m-auto">
+      <div class="col-md-12">
+        <h5 class="fw-bold bg-yellow-light py-2 text-center">
+          <a class="borrar mx-2" href="./index.html"> 
+            <img class="fw-bold" src="./imagenes/home.svg" alt="" width="50px"> Volver al Inicio
+          </a> 
+          
+          <img id="reproducir-frase" class="mx-2" src="./imagenes/play-circle-outline.svg" alt="" width="60px">Reproducir
+          <img class="mx-2" id="limpiar-frase" src="./imagenes/trash-outline.svg" alt="" width="47px">Borrar
+        </h5>
+       
+        <div class="d-flex flex-wrap mb-3 border p-1" id="phrase-container"></div>
+      </div>
+    </div>
+  </div>
+
+<!-- Pictogramas de emociones -->
+          <div class="container-fluid general mt-2">
+            <div class="row m-auto">
+           
+                <div class="col text-center">
+                  <H1><button onclick="agregarTexto('A')" alt="A" class="pictograma border  bg-light-purple" data-word="A" width="80" >A</button></H1>  
+                </div>
+                <div class="col text-center">
+                    <H1><button onclick="agregarTexto('DE')" alt="de" class="pictograma border  bg-light-purple" data-word="DE" width="80" >DE</button></H1>  
+                  </div>
+                  <div class="col text-center">
+                    <H1><button onclick="agregarTexto('CON')" alt="con" class="pictograma border  bg-light-purple" data-word="CON" width="80" >CON</button></H1>  
+                  </div>
+                  <div class="col text-center">
+                    <H1><button onclick="agregarTexto('LA')" alt="LA" class="pictograma border  bg-light-purple" data-word="LA" width="80" >LA</button></H1>  
+                  </div>
+                  <div class="col text-center">
+                    <H1><button onclick="agregarTexto('Y')" alt="Y" class="pictograma border  bg-light-purple" data-word="Y" width="80" >Y</button></H1>  
+                  </div>
+                  <div class="col text-center">
+                    <H1><button onclick="agregarTexto('LOS')" alt="LOS" class="pictograma border  bg-light-purple" data-word="LOS" width="80" >LOS</button></H1>  
+                  </div>
+                  <div class="col text-center">
+                    <H1><button onclick="agregarTexto('ME')" alt="ME" class="pictograma border  bg-light-purple" data-word="ME" width="80" >ME</button></H1>  
+                  </div>
+            
+                   
+                             
+
+    
+            
+      
+        <section>
+          <div class="container-fluid mt-2" >
+              <h3  class=" fw-bold bg-yellow-light py-2 text-center"> ¡Vamos a Practicar!</h3>
+              <div class="text-to-speech">
+                  <textarea class="fw-bold " id="text-input" placeholder="Escribe como te sientes hoy..."></textarea>
+                  <div class="buttons text-center">
+                      <button class="l1" id="speak-button">Reproducir</button>
+                      <button class="2" id="clear-button">Borrar</button>
+                  </div>
+              </div>
+          </div>
+      </section>
+  <div> 
+      <!-- SECCION INFORMACION -->
+  
+     
+
+
+    
+    
+    
+
+
+     
+    
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9SKddQX2zglP4WLP6U6Cq4U4ZV7eQ3FzyK0ttf8TZJ7dbP68S46" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-w76AibP9gyb2EGG4x5fOU0MAtcU0Kv3pF4/7Xrrd3NH4phMzE4XzN2XyK5gHfN9Yb" crossorigin="anonymous"></script>
+
+</body>

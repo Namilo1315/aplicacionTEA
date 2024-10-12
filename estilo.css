@@ -1,0 +1,872 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+        .container {
+            text-align: center;
+           padding: 10px;
+          }
+          
+          
+          
+  
+        
+        .text-to-speech {
+            margin-top: 20px;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .buttons {
+            margin-top: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .l1 {
+           background-color: rgb(254, 44, 20);
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .color{
+          color: rgb(255, 255, 255);
+          background-color: #055605ad;
+          font-size: 58px;
+          margin-top: 80px;
+          margin-bottom: 40px;
+          padding: 5px 5px;
+        }
+        
+        .boton{
+            padding: 15px 15px;
+            background: #055605;
+            color: white;
+            font-size: 19px;
+        }
+        .boton:hover{
+            padding: 15px 15px;
+            background: green;
+            color: white;
+            font-size: 20px;
+        }
+        .cartas :hover{
+            background-color:#e7e7e7
+        }
+        
+        .volver{
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 15%;
+          
+        }
+        
+        .gracias{
+            display: none;
+        }
+        h3{
+        
+           
+             padding: 20px;
+            
+         }
+        .link {
+            text-decoration: none;
+            color: black;
+        
+         }
+         
+         .bg-blue-pastel { background-color: #5ebff4; color: #000; }
+         .bg-yellow-pastel { background-color: #f5d63c; color: #000; }
+         .bg-green-pastel { background-color: #43fb55; color: #000; }
+         .bg-orange-pastel { background-color: #f79845; color: #000; }
+         .bg-pink-pastel { background-color: #f4878f; color: #000; }
+         .bg-light-blue { background-color: #48b4cf; color: #000; }
+         .bg-light-green { background-color: #76e63f; color: #000; }
+         .bg-light-purple { background-color: #d67ce6; color: #000; }
+         .bg-yellow-light { background-color: #f7eb65; color: #000; }
+         .bg-turquoise { background-color: #44dfd5; color: #000; }
+         .bg-coral-light { background-color: #f6c170; color: #000; }
+         .bg-mint { background-color: #f84831db; color: #000; }
+         
+
+
+          
+        .cartas :hover{
+            background-color:#e7e7e7
+        }
+        .borrar{
+        text-decoration:none ;
+        color: #000000;
+        }
+        #drawCanvas {
+            background-color: white;
+            border: 2px solid #000000;
+        }
+      
+        .canvas-responsive {
+            width: 91%;
+            height:10 0hv;
+            border: 1px solid black;
+            max-width: auto; /* Mantener una proporción máxima */
+        }
+        
+        
+        .general img.parrafos{
+            margin-bottom: -10px;
+        }
+        .general p{
+            margin-bottom: 1px;
+        }
+    
+        .pictograma{
+
+            padding: 2px;
+            border-radius:10px;
+            width: 95px;
+           
+        }
+        .pictograma1{
+            
+            padding: 3px;
+            
+            border-radius:10px;
+            width: 95px;
+        }
+        .parrafos{
+            font-size: 10px;
+            text-align: center;
+            
+        }
+        .parrafos1{
+            font-size: 10px;
+        }
+        .parrafos2{
+            font-size: 10px;
+        }
+        .pictogramacarpeta{
+          
+            padding: 3px;
+            
+            border-radius:10px;
+            width: 95px;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        .img-fluid {
+            max-height: 100px;
+        }
+        
+        #selectedPictograms {
+            min-height: 150px;
+            background-color: #e9ecef;
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+        }
+        
+        .btn-success {
+            background-color: #28a745;
+        }
+        
+        .volver{
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 15%;
+          
+        }
+        
+        .gracias{
+            display: none;
+        }
+        .logoamarillo{
+          margin-left: 130px; 
+        }
+        .logotran{
+            display: none;
+        }
+        .color2 a{
+            background-color:#1c3692;
+            color:#ffffff;
+        }
+        .color2 a:hover{
+            background-color: #0b1b54;
+            color:#e4e4e4;
+            font-weight: 700;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* *********************/
+        /* seccion I N I C I O */
+        /* *********************/
+        .hambuerguesa{
+            color:#1c3692;
+            width: 30px;
+            
+        }
+        
+        /*linear-gradient( rgba(40, 3, 251, 0.441),rgba(37, 0, 245, 0.391)),*/
+     
+        .redes1 {
+            color: #000000;
+            
+        }
+        .redes1 :hover {
+            color:#1c3692;
+         }
+
+       
+        .titulos{
+            font-size: 24px;
+            font-weight: 800;
+            
+            
+        }
+      
+         
+         .inicio1{
+           margin-left: 160px;
+        }
+        .inicio2{
+            color:#1c3692;
+            font-weight:bold;
+            font-size: 50px;
+    
+         } 
+        /* #inicio {
+            background: url("./imagenes/portada5.png");
+            background-size: cover;
+             margin-top: 15px;
+            background-position:center;
+            height:103vh;
+            
+
+        }   
+         */
+       
+        
+        .seleccionado {
+         font-size: 22px;
+        
+            
+        }
+        .parrafop{
+            font-weight: 500;
+        }
+       
+        
+        #inicio .contenido .presentacion .ayuda1 h3 {
+            display: none;
+            font-size: 40px;
+            margin-bottom: 105px;
+            text-align: center;
+            color:#ffffff;
+             font-weight: 900;
+            padding: 20px;
+            background-color:#1c3692d7;
+        }
+        
+        
+        
+        #inicio .contenido .presentacion .descripcion {
+            max-width: 70px;
+            margin: 25px auto;
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        #inicio .contenido .presentacion a {
+            text-decoration: none;
+            display: inline-block;
+            margin: 25px;
+            padding: 20px 25px;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            color: #000000;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: .5s;
+        }
+        
+        #inicio .contenido .presentacion a:hover {
+            background-color:#ffc107;
+            transform: scale(1.2, 1.2);
+            
+        }
+        
+        #icono-nav {
+            color: #fff;
+            display: none;
+        }
+
+
+        
+        #icono-nav {
+            color: #fff;
+            display: none;
+        }
+
+
+
+     
+
+        #whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        
+
+       
+        #whatsapp-button a img {
+            width: 55px; /* Ajusta el tamaño según tu preferencia */
+            border-radius: 40%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            background-color: #10f63a; /* Color de WhatsApp */
+            padding: 8px;
+            
+        }
+        
+        #whatsapp-button a img:hover {
+            background-color:#1c3692;/* Cambia el color al pasar el mouse */
+            opacity: 1;
+            
+        }
+        
+
+
+
+
+     
+    
+         
+       
+
+
+      
+ 
+     
+    
+    
+       
+        /* *********************/
+        /* seccion F O O T E R */
+        /* *********************/
+        
+        footer {
+           background-color:#1c3692;
+            color: #ffffff;
+            text-align: center;
+            padding: 7px 0;
+        }
+        
+        footer .redes1 {
+            text-decoration: none;
+            color: #ffffff;
+            display: inline-block;
+            margin: 5px;
+            font-size: 26px;
+        }
+        #footer .redes1 :hover {
+            color:#ffffff;
+            font-weight: 400;
+            transform: scale(1.2, 1.2);
+         }
+
+/* Estilos para el contenedor del texto */
+.text-container {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilos para el texto a revelar */
+.reveal-text {
+    opacity: 0;
+    animation: reveal 4s linear forwards;
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.derechos{
+    font-size: small;
+    font-weight: 500;
+}
+.img{
+    display: flex;
+    width: 600px;
+    height: 430px;
+  
+} 
+.img img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+    
+}
+
+.img img:hover{
+    cursor:all-scroll;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+
+}
+
+
+.portada{
+     
+    align-items: center;
+    justify-content: center;
+
+}
+.portada1{
+    padding: 40px 0px;
+    align-items: center;
+    justify-content: center;
+
+}
+.telefonos{
+    color: #1c3692;
+}
+.phrase-item {
+    display: flex;
+    align-items: center;
+    margin: 1px;
+   
+}
+
+.phrase-item img {
+    max-width: 70px; /* Ajusta el tamaño según sea necesario */
+    margin-right: 1px;
+    border: 1px solid rgb(74, 74, 74);
+    border-radius: 10px;
+    padding: 1px;
+}
+
+.phrase-item span {
+    margin-right: 5px;
+    
+}
+
+.remove-item {
+    cursor: pointer;
+    margin-left: 0px;
+    margin-bottom: 50px;
+    font-size: 1.3rem; /* Ajusta el tamaño de la X */
+    color: red;
+}
+
+
+
+        /* *********************/
+        /* seccion R E S P O N S I V E */
+        /* *********************/
+        
+        @media screen and (max-width: 800px) {
+           
+            .redes {
+                display: none;
+            }
+            
+            nav {
+                display: none;
+            }
+            nav.responsive {
+                display: block;
+                background-color: rgba(255, 255, 255, 0.8);
+                width: 100%;
+                position: absolute;
+                top: 40px;
+                left: 0;
+                
+                
+    
+            }
+            nav.responsive ul {
+                display: block !important;
+                text-align: center;
+                
+            }
+            nav.responsive ul li {
+                margin: 5px 0;
+            }
+            #icono-nav {
+                display: block;
+
+            }
+            
+            
+            
+             /* seccion HABLIDADES MI */
+             .contenedor-skills {
+                padding: 50px 20px;
+            }
+            
+             /* seccion SERVICIOS */
+              #nosotros {
+                padding: 40px 0;
+              }
+        #servicios {
+            padding: 50px 0;
+        }
+        #servicios .fila {
+            display: block;
+        }
+        #servicios .fila .proyecto {
+            margin: 10px auto;
+        }
+        /* seccion CONTACTO */
+        #contacto {
+            padding: 40px 0px;
+        }
+        #contacto .contenedor-form .mitad {
+            margin-bottom: 15px;
+            display: block;
+        }
+        #contacto .contenedor-form .mitad input {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+     
+            .logo{
+                width: 30px;
+                margin-left: 15px;
+            }
+            .linea{
+                display: none;
+            }
+            .final {
+                display: none;
+               
+            }
+            
+            
+
+            .contador-obras {
+               
+                background-size: cover;
+                background-position:center;
+                height: 75vh;
+                align-items: center;
+                justify-content: center;
+        
+            }
+            .counting{
+
+                align-items: center;
+                justify-content: center;
+        
+            }
+                        
+        
+            .counting .count{
+                font-size: 45px;
+                color: rgb(255, 255, 255);
+                font-weight: 800;
+                
+            }
+            #contacto .titulo-formulario {
+    
+                font-size: 15px;
+                font-weight: 700;
+                color: #000000;
+                 
+                 
+                }
+          .redes1 {
+                    color: #ffffff;
+                }
+                .redes1 :hover {
+                    color:#ffc107;
+                    
+                 }
+                 #icono-nav {
+                    display: block;
+                }
+                /*#inicio{
+                    background: url("./imagenes/2.png");
+                    background-size: cover;
+                     margin-top: 15px;
+                    background-position:center;
+                    height:75vh;
+                }
+               */
+                #inicio .contenido .presentacion .ayuda1 h3 {
+                    font-size: 20px;
+                  
+                    #inicio .contenido .presentacion .ayuda1 h3 {
+                        font-size: 25px;
+                        margin-bottom: 125px;
+                        text-align: center;
+                        color:#ffffff;
+                         font-weight: 900;
+                        padding: 20px;
+                        background-color:#1c3692cb;
+                    }
+                    
+                /* seccion SOBRE MI */
+                #sobremi {
+                    padding: 30px 0;
+                    display: block;
+                }
+                #sobremi .contenedor-foto {
+                    max-width: 200px;
+                    margin: auto;
+                }
+                #sobremi .contenedor-foto img {
+                    width: 100%;
+                    padding: 8px;
+                }
+                #sobremi .sobremi .titulo-seccion {
+                    text-align: center;
+                    margin-top: 10px;
+                   
+                }
+              
+                #sobremi .sobremi h2 {
+                    font-size: 25px;
+                    
+                }
+                
+                /* seccion MIS SERVICIOS */
+                #servicios {
+                    padding: 30px 15px;
+                }
+                #servicios .fila {
+                    display: block;
+                }
+                #servicios .fila .servicio {
+                    margin: 10px auto;
+                }
+                /* seccion HABLIDADES MI */
+                .contenedor-skills {
+                    padding: 50px 20px;
+                }
+                /* seccion PORTFOLIO */
+                #portfolio {
+                    padding: 50px 0;
+                }
+                #portfolio .fila {
+                    display: block;
+                }
+                #portfolio .fila .proyecto {
+                    margin: 10px auto;
+                }
+                /* seccion CONTACTO */
+                #contacto {
+                    padding: 30px 0px;
+                }
+                #contacto .contenedor-form .mitad {
+                    margin-bottom: 15px;
+                    display: block;
+                }
+                #contacto .contenedor-form .mitad input {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+
+
+                
+            }
+            
+                     /* seccion MIS SERVICIOS */
+            #servicios {
+                padding: 30px 15px;
+            }
+            #servicios .fila {
+                display: block;
+            }
+            #servicios .fila .servicio {
+                margin: 10px auto;
+            }
+           
+            .logonos{
+                display: none;
+            }
+            #inicio .contenido .presentacion {
+                height: 75vh;
+                margin: auto;
+               
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+        
+            }
+           
+            
+            
+            #inicio .contenido .presentacion .ayuda1 h3 {
+                display: flex;
+                font-size: 30px;
+                margin-bottom: 105px;
+                text-align: center;
+                color:#ffffff;
+                 font-weight: 900;
+                padding: 20px;
+                background-color:#1c3692d7;
+            }
+            .carousel img {
+                width: 70px; /* Ajusta el tamaño para pantallas más pequeñas */
+                margin: 0 15px;
+            }
+            .carousel {
+                padding: 40px 15px;
+                display: flex;
+                transition: transform 0.2s ease-in-out;
+            }
+            #nosotros1 .sobremi1 p {
+                font-size: 14px;
+                line-height: 25px;
+               margin-bottom:30px;
+               padding-left: 0px;
+               text-align: center;
+            }
+            .doslogos{
+                margin-bottom: 3
+                
+                
+                0px;
+                text-align: center;
+                
+            }
+            .final{
+                display: none;
+            }
+            .gracias{
+                display: inline;
+                text-align: center;
+            }
+            .footer1{
+                margin-top: 0px;
+            }
+            .logoamarillo{
+                margin-bottom: 0px;
+                margin-left: 0px; 
+                width: 75px;
+            }
+            #nosotros .sobremi .titulo-seccion {
+                font-size: 27px;
+                font-weight: 800;
+                text-transform: uppercase;
+                color: red;
+                text-decoration: underline;
+                text-decoration-color:#a8a8a8;
+                text-decoration-thickness: 5px;
+            
+            }
+           
+            #servicios .titulo-seccion {
+                font-size: 26px;
+                font-weight: 800;
+                text-transform: uppercase;
+                color: red;
+                text-decoration: underline;
+                text-decoration-color:#a8a8a8;
+                text-decoration-thickness: 5px;
+               
+            }
+           
+            #contacto .titulo-seccion {
+                font-size: 27px;
+                font-weight: 800;
+                text-transform: uppercase;
+                color: red;
+                text-decoration: underline;
+                text-decoration-color:#a8a8a8;
+                text-decoration-thickness: 5px;
+            }
+            #contacto .titulo-formulario {
+                font-size: 19px;
+                color: #242424;
+                font-weight: 700;
+                text-align: center;
+                 
+                 
+            }
+            #inicio .contenido header .contenido-header nav ul li a {
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                margin: 0 12px;
+                font-weight: 600;
+                transition: .5s;
+                font-size: 16px;
+                
+            }
+          
+            .pictograma{
+            
+                
+                padding: 3px;
+                
+                border-radius:10px;
+                width: 80px;
+            }
+            .pictograma1{
+                
+                
+                padding: 3px;
+                
+                border-radius:10px;
+                width: 80px;
+            }
+            .pictogramacarpeta{
+            
+                
+                padding: 3px;
+                
+                border-radius:10px;
+                width: 80px;
+            }
+            .parrafos{
+                font-size: 11px;
+            }
+            .phrase-item img {
+                max-width: 50px; /* Ajusta el tamaño según sea necesario */
+                margin-right: 1px;
+                border: 1px solid rgb(74, 74, 74);
+                border-radius: 10px;
+                padding: 1px;
+            }
+            .borrar{
+                display: none;
+            }
+           
+ }
