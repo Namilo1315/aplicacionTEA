@@ -1,10 +1,20 @@
 {
-    "name": "Autismo Naty",
-    "short_name": "Autismo Naty",
-    "start_url": "./index.html",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#4CAF50",
-    "icons": []
-  }
-  
+  "name": "Autismo Naty",
+  "short_name": "Autismo Naty",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "icons": [
+    {
+      "src": "imagenes/icon1.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "imagenes/icon2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
