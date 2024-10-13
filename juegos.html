@@ -266,14 +266,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9SKddQX2zglP4WLP6U6Cq4U4ZV7eQ3FzyK0ttf8TZJ7dbP68S46" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-w76AibP9gyb2EGG4x5fOU0MAtcU0Kv3pF4/7Xrrd3NH4phMzE4XzN2XyK5gHfN9Yb" crossorigin="anonymous"></script>
-<script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(function(registration) {
-          console.log('Service Worker registrado con éxito:', registration.scope);
-        }).catch(function(error) {
-          console.log('Error en el registro del Service Worker:', error);
-        });
-    }
-  </script>
+
 </body>
